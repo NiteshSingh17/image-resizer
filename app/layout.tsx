@@ -28,9 +28,41 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-          {children}
-        </Providers>
+      <title>Chrome Extension Image Resizer</title>
+      <meta name="title" content="Chrome Extension Image Resizer" />
+      <meta name="description" content="Resize images to all required Chrome extension sizes like 128x128, 440x280, and generate SEO-friendly meta tags instantly." />
+      <meta name="keywords" content="chrome extension image resizer, 128x128 icon, extension icon sizes, extension promo tile, SEO tag generator, chrome store image tool, web extension logo maker, extension assets, 440x280 promo, 920x680 large tile, extension screenshots" />
+      <meta name="author" content="BitSmall" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="http://image-resizer.bitsmall.in/" />
+
+      {/* Favicon and Icons */}
+      <link rel="icon" href="http://image-resizer.bitsmall.in/favicon.ico" type="image/x-icon" />
+      <link rel="icon" type="image/png" sizes="16x16" href="http://image-resizer.bitsmall.in/images/favicon-16.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="http://image-resizer.bitsmall.in/images/favicon-32.png" />
+      <link rel="icon" type="image/png" sizes="48x48" href="http://image-resizer.bitsmall.in/images/icon_48.png" />
+      <link rel="icon" type="image/png" sizes="128x128" href="http://image-resizer.bitsmall.in/images/icon_128.png" />
+      <link rel="icon" type="image/png" sizes="192x192" href="http://image-resizer.bitsmall.in/images/icon_192.png" />
+      <link rel="icon" type="image/png" sizes="512x512" href="http://image-resizer.bitsmall.in/images/icon_512.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="http://image-resizer.bitsmall.in/images/apple-touch-icon.png" />
+      <link rel="manifest" href="http://image-resizer.bitsmall.in/manifest.json" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://image-resizer.bitsmall.in/" />
+      <meta property="og:title" content="Chrome Extension Image Resizer" />
+      <meta property="og:description" content="Create 128x128 icons, promo tiles (440x280, 920x680), and other required assets for Chrome extensions. Fast and free." />
+      <meta property="og:image" content="http://image-resizer.bitsmall.in/images/preview.png" />
+      <meta property="og:site_name" content="Chrome Extension Image Resizer" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="http://image-resizer.bitsmall.in/" />
+      <meta name="twitter:title" content="Chrome Extension Image Resizer" />
+      <meta name="twitter:description" content="Easily resize images for Chrome extension icons, promo tiles, screenshots and generate SEO meta tags instantly." />
+      <meta name="twitter:image" content="http://image-resizer.bitsmall.in/images/twitter-preview.png" />
+
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
