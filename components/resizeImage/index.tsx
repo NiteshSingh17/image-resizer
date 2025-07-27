@@ -137,7 +137,7 @@ const PreviewCard = ({
         0,
         (uri) => {
           return setResizeImageUrl(
-            typeof uri === "string" ? uri : URL.createObjectURL(uri)
+            typeof uri === "string" ? uri : URL.createObjectURL(uri as unknown as Blob)
           );
         },
         "base64",

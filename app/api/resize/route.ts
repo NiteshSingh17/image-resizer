@@ -1,5 +1,5 @@
 import { put } from "@vercel/blob";
-import sharp from "sharp";
+import sharp, { FitEnum } from "sharp";
 import JSZip from "jszip";
 import { NextRequest, NextResponse } from "next/server";
 import { IncomingMessage } from "http";
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
       }
 
       try {
-        const format = fields.format;
+        const format = (fields.format ?? "cover") as unknown as keyof FitEnum;
         const width = parseInt(fields.width as unknown as string) || 1280;
         const height = parseInt(fields.height as unknown as string) || 720;
 
@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
             // Resize the image
             const resizedBuffer = await sharp(fileBuffer)
               .resize(width, height, {
-                fit: format ?? "cover",
+                fit: format,
               })
               .png({ quality: 100 })
               .toBuffer();
