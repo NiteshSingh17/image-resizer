@@ -79,6 +79,9 @@ export const ResizeImage = ({ files }: ResizeImageProps) => {
             size={{ width: 1400, height: 560 }}
           />
         </div>
+      </div>
+      <div className="mt-10 w-full">
+
         <div className="mt-4 flex gap-4 justify-between">
           <h2 className="">Image fill format</h2>
           <select value={format} className="bg-white px-2" onChange={(e) => setFormat(e.target.value)}>
@@ -89,10 +92,10 @@ export const ResizeImage = ({ files }: ResizeImageProps) => {
             <option value="outside">Outside</option>
           </select>
         </div>
+        <Button className="mt-4 w-full" loading={isPending} onClick={handleResizeImage}>
+          Download all
+        </Button>
       </div>
-      <Button loading={isPending} onClick={handleResizeImage}>
-        Download all
-      </Button>
     </div>
   );
 };

@@ -8,12 +8,12 @@ export default function Home() {
   const [files, setFiles] = useState<FileWithPreview[]>([]);
   return (
     <div className="flex p-4 lg:p-0 items-center justify-items-center">
-      <div className="flex flex-col lg:flex-row flex-wrap w-full items-center justify-center gap-2">
+      <div className="flex flex-col lg:flex-row flex-wrap w-full items-center justify-center">
         <div
           className={clsx(
-            "sm:p-20 w-full  lg:min-h-screen flex flex-col items-center justify-center gap-2",
+            "sm:p-20 w-full lg:min-h-screen flex flex-col items-center justify-center gap-2",
             {
-              "w-2/3": files.length > 0,
+              "lg:w-2/3": files.length > 0,
             }
           )}
         >
